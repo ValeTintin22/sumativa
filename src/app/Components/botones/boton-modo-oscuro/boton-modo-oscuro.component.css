@@ -1,0 +1,21 @@
+.btn-modo-oscuro {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #333333;  
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-modo-oscuro:hover {
+    background-color: #555555; 
+  }
+  
+  .btn-modo-oscuro:active {
+    background-color: #777777;  
+    transform: scale(0.95);
+  }
+  

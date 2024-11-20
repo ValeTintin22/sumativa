@@ -1,0 +1,19 @@
+p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+  }
+  body.modo-oscuro {
+    background-color: #121212;
+    color: white;
+  }
+  
+  body.modo-oscuro button {
+    background-color: #333333;
+    color: white;
+  }
+  
+  body.modo-oscuro button:hover {
+    background-color: #555555;
+  }
+  
