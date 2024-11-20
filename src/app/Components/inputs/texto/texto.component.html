@@ -1,1 +1,9 @@
-<p>texto works!</p>
+<div class="texto-container">
+    <input
+      type="text"
+      [(ngModel)]="texto"
+      placeholder="Ingresa texto normal"
+      (blur)="validarTexto()" />
+    <div class="error" *ngIf="error">{{ error }}</div>
+  </div>
+  

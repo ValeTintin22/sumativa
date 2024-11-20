@@ -3,7 +3,10 @@ import { BotonAceptarComponent } from '../botones/boton-aceptar/boton-aceptar.co
 import { BotonCancelarComponent } from '../botones/boton-cancelar/boton-cancelar.component';
 import { BotonPrimarioComponent } from '../botones/boton-primario/boton-primario.component';
 import { BotonSecundarioComponent } from '../botones/boton-secundario/boton-secundario.component';
-import { BotonModoOscuroComponent } from '../botones/boton-modo-oscuro/boton-modo-oscuro.component';  // Importamos el nuevo botón
+import { BotonModoOscuroComponent } from '../botones/boton-modo-oscuro/boton-modo-oscuro.component';
+import { PasswordComponent } from '../inputs/password/password.component';
+import { EmailComponent } from '../inputs/email/email.component';
+import { TextoComponent } from '../inputs/texto/texto.component'; // Importamos el componente app-texto
 
 @Component({
   selector: 'app-demostrativo',
@@ -13,22 +16,39 @@ import { BotonModoOscuroComponent } from '../botones/boton-modo-oscuro/boton-mod
     BotonCancelarComponent,
     BotonPrimarioComponent,
     BotonSecundarioComponent,
-    BotonModoOscuroComponent  // Añadimos el botón de modo oscuro
+    BotonModoOscuroComponent,
+    PasswordComponent,
+    EmailComponent,
+    TextoComponent, // Importamos el nuevo componente app-texto
   ],
   templateUrl: './demostrativo.component.html',
   styleUrls: ['./demostrativo.component.css']
 })
 export class DemostrativoComponent {
   mensaje: string = '';
-  modoOscuro: boolean = false;  // Estado para el modo oscuro
+  modoOscuro: boolean = false;
+  passwordAlmacenada: string = '';
+  emailAlmacenado: string = '';
+  textoAlmacenado: string = '';
 
   manejarAccion(mensaje: string): void {
     this.mensaje = mensaje;
   }
 
-  // Cambiar el tema cuando se active el modo oscuro
   cambiarModoOscuro(isModoOscuro: boolean): void {
     this.modoOscuro = isModoOscuro;
-    document.body.classList.toggle('modo-oscuro', this.modoOscuro); // Cambia la clase en el body
+    document.body.classList.toggle('modo-oscuro', this.modoOscuro);
+  }
+
+  manejarPasswordValida(password: string): void {
+    this.passwordAlmacenada = password;
+  }
+
+  manejarEmailValido(email: string): void {
+    this.emailAlmacenado = email;
+  }
+
+  manejarTextoValido(texto: string): void {
+    this.textoAlmacenado = texto;
   }
 }

@@ -1,7 +1,7 @@
 .btn-aceptar {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #a1f701;
   color: white;
   border: none;
   border-radius: 5px;
@@ -9,7 +9,7 @@
 }
 
 .btn-aceptar:hover {
-  background-color: #45a049;
+  background-color: #38c500;
 }
 
   

@@ -1,0 +1,18 @@
+.email-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error {
+    color: rgb(112, 112, 112);
+    font-size: 14px;
+  }
+  

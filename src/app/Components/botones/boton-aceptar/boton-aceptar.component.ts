@@ -11,6 +11,6 @@ export class BotonAceptarComponent {
   @Output() accion: EventEmitter<string> = new EventEmitter<string>();
 
   emitirEvento() {
-    this.accion.emit('Botón Aceptar clickeado');
+    this.accion.emit('Botón Aceptar ');
   }
 }

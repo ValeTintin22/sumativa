@@ -1,7 +1,30 @@
-<p>{{ mensaje }}</p>
 
-<app-boton-aceptar (accion)="manejarAccion($event)"></app-boton-aceptar>
-<app-boton-cancelar (accion)="manejarAccion($event)"></app-boton-cancelar>
-<app-boton-primario (accion)="manejarAccion($event)"></app-boton-primario>
-<app-boton-secundario (accion)="manejarAccion($event)"></app-boton-secundario>
-<app-boton-modo-oscuro (modoOscuroCambiado)="cambiarModoOscuro($event)"></app-boton-modo-oscuro>
+<p>Mensaje: {{ mensaje }}</p>
+<p>Modo Oscuro: {{ modoOscuro ? 'Activado' : 'Desactivado' }}</p>
+<p>Contraseña Almacenada: {{ passwordAlmacenada }}</p>
+<p>Correo Electrónico Almacenado: {{ emailAlmacenado }}</p>
+<p>Texto Almacenado: {{ textoAlmacenado }}</p>
+
+
+<div class="botones">
+  <app-boton-aceptar (accion)="manejarAccion($event)"></app-boton-aceptar>
+  <app-boton-cancelar (accion)="manejarAccion($event)"></app-boton-cancelar>
+  <app-boton-primario (accion)="manejarAccion($event)"></app-boton-primario>
+  <app-boton-secundario (accion)="manejarAccion($event)"></app-boton-secundario>
+  <app-boton-modo-oscuro (modoOscuroCambiado)="cambiarModoOscuro($event)"></app-boton-modo-oscuro>
+</div>
+
+
+<div class="inputs">
+  <app-password (passwordValida)="manejarPasswordValida($event)"></app-password>
+</div>
+
+
+<div class="inputs">
+  <app-email (emailValido)="manejarEmailValido($event)"></app-email>
+</div>
+
+
+<div class="inputs">
+  <app-texto (textoValido)="manejarTextoValido($event)"></app-texto>
+</div>
