@@ -1,14 +1,22 @@
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { DemostrativoComponent } from './Components/demostrativo/demostrativo.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, DemostrativoComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myapp';
+  modoOscuro: boolean = false;
+
+  // Método para alternar entre modo oscuro y claro
+  toggleModoOscuro() {
+    this.modoOscuro = !this.modoOscuro;
+    if (this.modoOscuro) {
+      document.body.classList.add('modo-oscuro');
+    } else {
+      document.body.classList.remove('modo-oscuro');
+    }
+  }
 }
+

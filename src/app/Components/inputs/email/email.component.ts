@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-email',
   standalone: true,
-  imports: [FormsModule, CommonModule], // Importamos los módulos necesarios
+  imports: [FormsModule, CommonModule], 
   templateUrl: './email.component.html',
   styleUrls: ['./email.component.css']
 })
@@ -16,13 +16,13 @@ export class EmailComponent {
   @Output() emailValido: EventEmitter<string> = new EventEmitter<string>();
 
   validarEmail(): void {
-    // Expresión regular para validar formato de correo electrónico
+    
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regex.test(this.email)) {
-      this.error = 'El correo electrónico no es válido.';
+      this.error = 'Correo electrónico no válido, intente de nuevo.';
     } else {
       this.error = '';
-      this.emailValido.emit(this.email); // Emitimos el correo válido
+      this.emailValido.emit(this.email); 
     }
   }
 }

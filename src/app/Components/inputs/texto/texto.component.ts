@@ -16,12 +16,12 @@ export class TextoComponent {
   @Output() textoValido: EventEmitter<string> = new EventEmitter<string>();
 
   validarTexto(): void {
-    const regex = /^[a-zA-Z\s]+$/; // Permite solo letras y espacios
+    const regex = /^[a-zA-Z\s]+$/; 
     if (!regex.test(this.texto)) {
-      this.error = 'El texto solo puede contener letras y espacios.';
+      this.error = 'El texto solo puede contener letras y espacios, intenet nuevamente.';
     } else {
       this.error = '';
-      this.textoValido.emit(this.texto); // Emitimos el texto válido
+      this.textoValido.emit(this.texto);
     }
   }
 }

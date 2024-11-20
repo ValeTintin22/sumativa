@@ -2,7 +2,7 @@
     <input 
       type="email" 
       [(ngModel)]="email" 
-      placeholder="Ingresa tu correo electrónico"
+      placeholder="Ingrese el correo electrónico"
       (blur)="validarEmail()" />
     <div class="error" *ngIf="error">{{ error }}</div>
   </div>

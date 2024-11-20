@@ -17,10 +17,10 @@ export class PasswordComponent {
 
   validarPassword(): void {
     if (this.password.length < 8) {
-      this.error = 'La contraseña debe tener al menos 8 caracteres.';
+      this.error = 'La contraseña debe tener al menos 8 caractéres, intente de nuevo.';
     } else {
       this.error = '';
-      this.passwordValida.emit(this.password); // Emitimos la contraseña válida
+      this.passwordValida.emit(this.password); 
     }
   }
 }

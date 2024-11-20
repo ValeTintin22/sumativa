@@ -10,8 +10,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class BotonModoOscuroComponent {
   @Output() modoOscuroCambiado: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  // Emitimos un evento que indica si el modo oscuro debe ser activado o no
   emitirEvento() {
-    this.modoOscuroCambiado.emit(true);  // Activamos el modo oscuro
+    this.modoOscuroCambiado.emit(true);  
   }
 }

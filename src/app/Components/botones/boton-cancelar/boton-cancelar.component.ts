@@ -11,6 +11,6 @@ export class BotonCancelarComponent {
   @Output() accion: EventEmitter<string> = new EventEmitter<string>();
 
   emitirEvento() {
-    this.accion.emit('Botón Cancelar clickeado');
+    this.accion.emit('Botón Cancelar ');
   }
 }

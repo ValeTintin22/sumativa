@@ -11,6 +11,6 @@ export class BotonPrimarioComponent {
   @Output() accion: EventEmitter<string> = new EventEmitter<string>();
 
   emitirEvento() {
-    this.accion.emit('Botón Primario clickeado');
+    this.accion.emit('Botón Primario');
   }
 }
