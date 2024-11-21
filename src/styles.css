@@ -1,0 +1,28 @@
+.contenedor {
+    width: 300px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  
+  .inputs {
+    margin-top: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  

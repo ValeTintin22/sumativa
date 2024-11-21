@@ -52,3 +52,7 @@ export class DemostrativoComponent {
     this.textoAlmacenado = texto;
   }
 }
+<div class="contenedor">
+  <p>Modo Oscuro: {{ modoOscuro ? 'Activado' : 'Desactivado' }}</p>
+  <app-boton-modo-oscuro (modoOscuroCambiado)="cambiarModoOscuro($event)"></app-boton-modo-oscuro>
+</div>

@@ -1,20 +1,17 @@
 
 import { Component } from '@angular/core';
-import { DemostrativoComponent } from "./Components/demostrativo/demostrativo.component";
+import { DemostrativoComponent } from './Components/demostrativo/demostrativo.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true, 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [DemostrativoComponent],
+  imports: [DemostrativoComponent], 
 })
 export class AppComponent {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
   modoOscuro: boolean = false;
 
-  // Método para alternar entre modo oscuro y claro
   toggleModoOscuro() {
     this.modoOscuro = !this.modoOscuro;
     if (this.modoOscuro) {
@@ -24,4 +21,5 @@ export class AppComponent {
     }
   }
 }
+
 

@@ -2,15 +2,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boton-modo-oscuro',
-  standalone: true,
-  imports: [],
   templateUrl: './boton-modo-oscuro.component.html',
-  styleUrls: ['./boton-modo-oscuro.component.css']
+  styleUrls: ['./boton-modo-oscuro.component.css'],
+  standalone: true
 })
 export class BotonModoOscuroComponent {
-  @Output() modoOscuroCambiado: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() modoOscuroCambiado = new EventEmitter<boolean>();
+  private estadoOscuro: boolean = false;
 
-  emitirEvento() {
-    this.modoOscuroCambiado.emit(true);  
+  toggleModoOscuro() {
+    this.estadoOscuro = !this.estadoOscuro;
+    this.modoOscuroCambiado.emit(this.estadoOscuro);
   }
 }
